@@ -3,7 +3,7 @@ import os
 # 可以指定一个绝对路径，统一存放所有的Embedding和LLM模型。
 # 每个模型可以是一个单独的目录，也可以是某个目录下的二级子目录。
 # 如果模型目录名称和 MODEL_PATH 中的 key 或 value 相同，程序会自动检测加载，无需修改 MODEL_PATH 中的路径。
-MODEL_ROOT_PATH = ""
+MODEL_ROOT_PATH = "/mnt/workspace/Langchain-Chatchat/chatglm3-6b"
 
 # 选用的 Embedding 名称
 EMBEDDING_MODEL = "bge-large-zh-v1.5"
@@ -26,7 +26,8 @@ EMBEDDING_MODEL_OUTPUT_PATH = "output"
 # 在这里，我们使用目前主流的两个离线模型，其中，chatglm3-6b 为默认加载模型。
 # 如果你的显存不足，可使用 Qwen-1_8B-Chat, 该模型 FP16 仅需 3.8G显存。
 
-LLM_MODELS = ["chatglm3-6b", "zhipu-api", "openai-api"]
+#LLM_MODELS = ["chatglm3-6b", "zhipu-api", "openai-api"]
+LLM_MODELS = "chatglm3-6b"
 Agent_MODEL = None
 
 # LLM 模型运行设备。设为"auto"会自动检测(会有警告)，也可手动设定为 "cuda","mps","cpu","xpu" 其中之一。
@@ -151,12 +152,12 @@ MODEL_PATH = {
         "m3e-base": "moka-ai/m3e-base",
         "m3e-large": "moka-ai/m3e-large",
 
-        "bge-small-zh": "BAAI/bge-small-zh",
-        "bge-base-zh": "BAAI/bge-base-zh",
-        "bge-large-zh": "BAAI/bge-large-zh",
-        "bge-large-zh-noinstruct": "BAAI/bge-large-zh-noinstruct",
-        "bge-base-zh-v1.5": "BAAI/bge-base-zh-v1.5",
-        "bge-large-zh-v1.5": "BAAI/bge-large-zh-v1.5",
+        "bge-small-zh": "bge-small-zh",
+        "bge-base-zh": "bge-base-zh",
+        "bge-large-zh": "bge-large-zh",
+        "bge-large-zh-noinstruct": "bge-large-zh-noinstruct",
+        "bge-base-zh-v1.5": "bge-base-zh-v1.5",
+        "bge-large-zh-v1.5": "bge-large-zh-v1.5",
 
         "bge-m3": "BAAI/bge-m3",
 
@@ -167,10 +168,10 @@ MODEL_PATH = {
     },
 
     "llm_model": {
-        "chatglm2-6b": "THUDM/chatglm2-6b",
-        "chatglm2-6b-32k": "THUDM/chatglm2-6b-32k",
-        "chatglm3-6b": "THUDM/chatglm3-6b",
-        "chatglm3-6b-32k": "THUDM/chatglm3-6b-32k",
+        "chatglm2-6b": "chatglm2-6b",
+        "chatglm2-6b-32k": "chatglm2-6b-32k",
+        "chatglm3-6b": "chatglm3-6b",
+        "chatglm3-6b-32k": "chatglm3-6b-32k",
 
         "Orion-14B-Chat": "OrionStarAI/Orion-14B-Chat",
         "Orion-14B-Chat-Plugin": "OrionStarAI/Orion-14B-Chat-Plugin",
@@ -208,9 +209,9 @@ MODEL_PATH = {
 
         "Yi-34B-Chat": "https://huggingface.co/01-ai/Yi-34B-Chat",
 
-        "agentlm-7b": "THUDM/agentlm-7b",
-        "agentlm-13b": "THUDM/agentlm-13b",
-        "agentlm-70b": "THUDM/agentlm-70b",
+        "agentlm-7b": "agentlm-7b",
+        "agentlm-13b": "agentlm-13b",
+        "agentlm-70b": "agentlm-70b",
 
         "falcon-7b": "tiiuae/falcon-7b",
         "falcon-40b": "tiiuae/falcon-40b",
@@ -238,8 +239,8 @@ MODEL_PATH = {
     },
 
     "reranker": {
-        "bge-reranker-large": "BAAI/bge-reranker-large",
-        "bge-reranker-base": "BAAI/bge-reranker-base",
+        "bge-reranker-large": "bge-reranker-large",
+        "bge-reranker-base": "bge-reranker-base",
     }
 }
 
@@ -250,10 +251,10 @@ NLTK_DATA_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "nltk_
 
 # 使用VLLM可能导致模型推理能力下降，无法完成Agent任务
 VLLM_MODEL_DICT = {
-    "chatglm2-6b": "THUDM/chatglm2-6b",
-    "chatglm2-6b-32k": "THUDM/chatglm2-6b-32k",
-    "chatglm3-6b": "THUDM/chatglm3-6b",
-    "chatglm3-6b-32k": "THUDM/chatglm3-6b-32k",
+    "chatglm2-6b": "chatglm2-6b",
+    "chatglm2-6b-32k": "chatglm2-6b-32k",
+    "chatglm3-6b": "chatglm3-6b",
+    "chatglm3-6b-32k": "chatglm3-6b-32k",
 
     "Llama-2-7b-chat-hf": "meta-llama/Llama-2-7b-chat-hf",
     "Llama-2-13b-chat-hf": "meta-llama/Llama-2-13b-chat-hf",

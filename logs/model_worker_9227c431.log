@@ -1,0 +1,102 @@
+2024-03-13 23:34:06 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker 9227c431 ...
+2024-03-13 23:34:16 | ERROR | stderr | Process model_worker - chatglm3-6b:
+2024-03-13 23:34:16 | ERROR | stderr | Traceback (most recent call last):
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/connection.py", line 203, in _new_conn
+2024-03-13 23:34:16 | ERROR | stderr |     sock = connection.create_connection(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+2024-03-13 23:34:16 | ERROR | stderr |     raise err
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+2024-03-13 23:34:16 | ERROR | stderr |     sock.connect(sa)
+2024-03-13 23:34:16 | ERROR | stderr | OSError: [Errno 101] Network is unreachable
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | Traceback (most recent call last):
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 791, in urlopen
+2024-03-13 23:34:16 | ERROR | stderr |     response = self._make_request(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 492, in _make_request
+2024-03-13 23:34:16 | ERROR | stderr |     raise new_e
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+2024-03-13 23:34:16 | ERROR | stderr |     self._validate_conn(conn)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1097, in _validate_conn
+2024-03-13 23:34:16 | ERROR | stderr |     conn.connect()
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/connection.py", line 611, in connect
+2024-03-13 23:34:16 | ERROR | stderr |     self.sock = sock = self._new_conn()
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/connection.py", line 218, in _new_conn
+2024-03-13 23:34:16 | ERROR | stderr |     raise NewConnectionError(
+2024-03-13 23:34:16 | ERROR | stderr | urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f61708be5f0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | Traceback (most recent call last):
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+2024-03-13 23:34:16 | ERROR | stderr |     resp = conn.urlopen(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 845, in urlopen
+2024-03-13 23:34:16 | ERROR | stderr |     retries = retries.increment(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/urllib3/util/retry.py", line 515, in increment
+2024-03-13 23:34:16 | ERROR | stderr |     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+2024-03-13 23:34:16 | ERROR | stderr | urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /THUDM/chatglm3-6b/resolve/main/config.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f61708be5f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | Traceback (most recent call last):
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1238, in hf_hub_download
+2024-03-13 23:34:16 | ERROR | stderr |     metadata = get_hf_file_metadata(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+2024-03-13 23:34:16 | ERROR | stderr |     return fn(*args, **kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1631, in get_hf_file_metadata
+2024-03-13 23:34:16 | ERROR | stderr |     r = _request_wrapper(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 385, in _request_wrapper
+2024-03-13 23:34:16 | ERROR | stderr |     response = _request_wrapper(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 408, in _request_wrapper
+2024-03-13 23:34:16 | ERROR | stderr |     response = get_session().request(method=method, url=url, **params)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+2024-03-13 23:34:16 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+2024-03-13 23:34:16 | ERROR | stderr |     r = adapter.send(request, **kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 67, in send
+2024-03-13 23:34:16 | ERROR | stderr |     return super().send(request, *args, **kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+2024-03-13 23:34:16 | ERROR | stderr |     raise ConnectionError(e, request=request)
+2024-03-13 23:34:16 | ERROR | stderr | requests.exceptions.ConnectionError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /THUDM/chatglm3-6b/resolve/main/config.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f61708be5f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: b9ff323d-a3ae-49be-9043-a675e011d705)')
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | Traceback (most recent call last):
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/transformers/utils/hub.py", line 385, in cached_file
+2024-03-13 23:34:16 | ERROR | stderr |     resolved_file = hf_hub_download(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+2024-03-13 23:34:16 | ERROR | stderr |     return fn(*args, **kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1371, in hf_hub_download
+2024-03-13 23:34:16 | ERROR | stderr |     raise LocalEntryNotFoundError(
+2024-03-13 23:34:16 | ERROR | stderr | huggingface_hub.utils._errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-13 23:34:16 | ERROR | stderr | 
+2024-03-13 23:34:16 | ERROR | stderr | Traceback (most recent call last):
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2024-03-13 23:34:16 | ERROR | stderr |     self.run()
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/multiprocessing/process.py", line 108, in run
+2024-03-13 23:34:16 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/mnt/workspace/Langchain-Chatchat/startup.py", line 389, in run_model_worker
+2024-03-13 23:34:16 | ERROR | stderr |     app = create_model_worker_app(log_level=log_level, **kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/mnt/workspace/Langchain-Chatchat/startup.py", line 217, in create_model_worker_app
+2024-03-13 23:34:16 | ERROR | stderr |     worker = ModelWorker(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/fastchat/serve/model_worker.py", line 77, in __init__
+2024-03-13 23:34:16 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 348, in load_model
+2024-03-13 23:34:16 | ERROR | stderr |     model, tokenizer = adapter.load_model(model_path, kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 816, in load_model
+2024-03-13 23:34:16 | ERROR | stderr |     tokenizer = AutoTokenizer.from_pretrained(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 773, in from_pretrained
+2024-03-13 23:34:16 | ERROR | stderr |     config = AutoConfig.from_pretrained(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 1100, in from_pretrained
+2024-03-13 23:34:16 | ERROR | stderr |     config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/transformers/configuration_utils.py", line 634, in get_config_dict
+2024-03-13 23:34:16 | ERROR | stderr |     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/transformers/configuration_utils.py", line 689, in _get_config_dict
+2024-03-13 23:34:16 | ERROR | stderr |     resolved_config_file = cached_file(
+2024-03-13 23:34:16 | ERROR | stderr |   File "/opt/conda/lib/python3.10/site-packages/transformers/utils/hub.py", line 425, in cached_file
+2024-03-13 23:34:16 | ERROR | stderr |     raise EnvironmentError(
+2024-03-13 23:34:16 | ERROR | stderr | OSError: We couldn't connect to 'https://huggingface.co' to load this file, couldn't find it in the cached files and it looks like THUDM/chatglm3-6b is not the path to a directory containing a file named config.json.
+2024-03-13 23:34:16 | ERROR | stderr | Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
